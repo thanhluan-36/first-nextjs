@@ -6,7 +6,6 @@ import {JSDOM} from 'jsdom';
 // }
 export default function course() {
     const website = 'https://docs.google.com/document/d/e/2PACX-1vT1YqDoJ6oQo5fuZs-maN6MJ2i82zk_DeX6dW1_S7d5DLgVNHt66Y6QRr3o4qRQK-RsgbdcDqsASJAi/pub';
-    const cheerio = require('cheerio'); // khai báo module cheerio
     const request = require('request-promise'); // khai báo module request-promise
     
     var data = {}
