@@ -2,6 +2,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  let name = ' thanh hoa 36'
   return (
     <div className={styles.container}>
       <Head>
@@ -11,7 +12,7 @@ export default function Home() {
 
       <main>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js! version2</a>
+          Welcome to <a href="https://nextjs.org">Next.js! version2 {name}</a>
         </h1>
         <h2>Tôi tên là VŨ THÀNH LUÂN</h2>
 
