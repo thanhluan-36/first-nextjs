@@ -39,8 +39,9 @@ export default function course() {
         html: null,
     });
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         setKeys((prev) => [...prev, key]);
+        e.preventDefault();
     };
     useEffect(() => {
         const getData = async () => {
@@ -143,20 +144,21 @@ export default function course() {
             </div>
             <div className="addKey">
                 <h3>Add Keyword</h3>
-
-                <input
-                    type="string"
-                    value={key}
-                    onChange={(e) => setKey(e.target.value)}
-                    style={{ height: '20px', textAlign: 'center' }}
-                />
-                <button
-                    type="submit"
-                    onClick={handleSubmit}
-                    style={{ background: 'orange', height: '25px', border: 'none', fontSize: '15px' }}
-                >
-                    Add
-                </button>
+                <form onSubmit={handleSubmit}>
+                    <label>
+                        <input
+                            type="text"
+                            value={key}
+                            onChange={(e) => setKey(e.target.value)}
+                            style={{ height: '20px', textAlign: 'center' }}
+                        />
+                    </label>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        style={{ background: 'orange', height: '25px', border: 'none', fontSize: '15px' }}
+                    />
+                </form>
             </div>
             <div
                 className="scrolbar"
